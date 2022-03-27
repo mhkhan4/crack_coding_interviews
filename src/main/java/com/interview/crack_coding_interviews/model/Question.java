@@ -4,7 +4,7 @@ package com.interview.crack_coding_interviews.model;
 import javax.persistence.*;
 
 @Entity
-public class InterviewQuestions {
+public class Question {
 
     @Id
     @SequenceGenerator(
@@ -16,7 +16,6 @@ public class InterviewQuestions {
             strategy = GenerationType.SEQUENCE,
             generator = "question_sequence"
     )
-    //id
     private long id;
 
     @Column(
@@ -25,6 +24,11 @@ public class InterviewQuestions {
     )
     //name of the problem
     private String questionName;
+
+    private String questionDescription;
+    private String type;
+
+    private String subType;
 
     private String youtubeLink;
 
@@ -35,15 +39,18 @@ public class InterviewQuestions {
     private String discussions;
 
     //default constructor
-    public InterviewQuestions(){}
+    public Question(){}
 
     //constructor
-    public InterviewQuestions(String questionName, String youtubeLink, String javaCode, String discussions, String javaScriptCode){
+    public Question(String questionName, String youtubeLink, String javaCode, String discussions, String javaScriptCode, String type, String subType, String questionDescription){
         this.questionName = questionName;
+        this.questionDescription = questionDescription;
         this.youtubeLink = youtubeLink;
         this.javaCode = javaCode;
         this.discussions = discussions;
         this.javaScriptCode = javaScriptCode;
+        this.type = type;
+        this.subType = subType;
     }
 
     //getter and setter
@@ -97,5 +104,29 @@ public class InterviewQuestions {
 
     public void setDiscussions(String discussions) {
         this.discussions = discussions;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getSubType() {
+        return subType;
+    }
+
+    public void setSubType(String subType) {
+        this.subType = subType;
+    }
+
+    public String getQuestionDescription() {
+        return questionDescription;
+    }
+
+    public void setQuestionDescription(String questionDescription) {
+        this.questionDescription = questionDescription;
     }
 }
