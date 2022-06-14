@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, {useState, useEffect} from "react";
-import "./components/Container";
 import Container from "./components/Container";
+import WelcomeMsg from "./components/WelcomeMsg"
+import Navbar from "./components/Navbar";
 
 
 const Questions = () =>{
@@ -21,8 +22,9 @@ const Questions = () =>{
 function App() {
   return (
     <div className="App">
+      <Navbar />
+      {/*<WelcomeMsg />*/}
       <Container />
-      <Questions />
     </div>
   );
 }

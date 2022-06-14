@@ -1,3 +1,8 @@
+h2 {
+    text-align: center;
+    color: darkgreen;
+}
+
 .container{
     position: relative;
     width: 1200px;
@@ -15,4 +20,32 @@
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 10px;
+}
+
+.container #array{
+    background-image: url(../images/array.png);
+    background-position: center;
+    background-size: calc(400px - 30px) calc(300px - 30px);
+    background-repeat: no-repeat;
+}
+
+.container #linkedList{
+    background-image: url(../images/linkedList.png);
+    background-position: center;
+    background-size: calc(400px - 30px) calc(300px - 30px);
+    background-repeat: no-repeat;
+}
+
+.container #heap{
+    background-image: url(../images/heap.png);
+    background-position: center;
+    background-size: calc(400px - 30px) calc(300px - 30px);
+    background-repeat: no-repeat;
+}
+
+.container .title{
+    margin: 15px;
+    font-family: "Academy Engraved LET";
+    font-weight: bold;
+    font-size: 25px;
 }
